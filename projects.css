@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: #f0ffff; */
+}
+
+/* header  */
+
+header{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  background-color: azure;
+  z-index: 2;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.POSSE1 {
+  width: 200px;
+  height: 50px;
+}
+
+a {
+  margin-right: 50px;
+}
+
+/* INTRO */
+
+.intro_container {
+  background-image: url(img/bg.png);
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  padding: 60px 0;
+  text-align: center;
+  color: #000;
+}
+
+.intro_title {
+  margin: 20px auto 0 auto;
+  position: relative;
+  width: 860px;
+  max-width: calc(100% - 40px);
+  padding: 15px 0px;
+  box-sizing: border-box;
+}
+
+.intro_title h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.intro_title::before, .intro_title::after {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.intro_title::before {
+    top: 0;
+    left: 0;
+    border-top: 4px solid #0000ff;
+    border-left: 4px solid #0000ff;
+}
+
+.intro_title::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 4px solid #0000ff;
+  border-right: 4px solid #0000ff;
+}
+
+.intro_content {
+  padding: 0;
+}
+
+.intro_content p {
+  margin-bottom: 2.4rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.underline {
+  font-weight: bold;
+  background: linear-gradient(transparent 70%, #0000ff 70%);
+}
+
+/* もぐらたたきゲーム */
+
+.game {
+  background-color: #e0ffff;
+}
+
+.heading {
+  font-size: 2em;
+  margin: 0;
+  text-align: center;
+}
+
+.heading p {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.container {
+  background-color: #99e6ff;
+  color: #000;
+  margin: 0 25%;
+  padding: 1% 0;
+  border-radius: 10px;
+  border: 1px solid #000;
+  cursor: none;
+}
+
+.score {
+  font-size: 1.3em;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.holesCont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7em;
+  justify-items: center;
+}
+
+.hole {
+  position: relative;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background-color: #f0ffff;
+  overflow: hidden;
+}
+
+.mole {
+  position: absolute;
+  z-index: 1;
+  height: 120px;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: appear 0.3s linear;
+  pointer-events: none;
+}
+
+@keyframes appear {
+  from {
+    bottom: -60px;
+  }
+  to {
+    bottom: 15%;
+  }
+}
+
+.buttons {
+  margin: 2em 0 1em 0;
+  text-align: center;
+}
+
+.buttons button {
+  padding: 15px 45px;
+  background-color: inherit;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 3px;
+  outline: none;
+}
+
+button.stop {
+  display: none;
+}
+
+.cursor img {
+  position: absolute;
+  height: 125px;
+  top: 70%;
+  left: 55%;
+  z-index: 2;
+  transform: translate(-10px, -40px);
+  pointer-events: none;
+}
+
+@keyframes hit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
