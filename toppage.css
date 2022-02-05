@@ -1,0 +1,342 @@
+
+body{
+  overflow-x: hidden;
+}
+/* ローディング画面 */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #0bd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.loading{
+  position: relative;
+  animation: fadein-keyframes 1s ease 3s 1 forwards;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  /* animation: sk-scaleout 3.0s infinite ease-in-out; */
+  animation: fadein-keyframes 2s ease 2s 1 forwards;
+}
+
+.POSSE{
+  /* width: 1500px; */
+  transform: translate(-50%,-50%);
+}
+
+
+@keyframes fadein-keyframes {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+/* ここまで */
+/* ローディングアニメーション */
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  } 100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+/* ここまで */
+
+body{
+  max-width: 1440px;
+  background-color: azure;
+}
+
+header{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background-color: azure;
+  z-index: 2;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+a{
+  margin-right: 50px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.POSSE1{
+  width: 200px;
+  height: 50px;
+}
+
+.image-container{
+  position: relative;
+}
+
+.image1{
+  width: 1100px;
+  height: 650px;
+  object-fit: cover;
+  position: absolute;
+  top: 150px;
+  left: 400px;
+  clip-path: url(#myClip)
+  /* opacity: 0.8; */
+}
+
+.image2{
+  width: 750px;
+  height: 200px;
+  position: absolute;
+  top: 450px;
+  left: 10px;
+}
+
+.introduction{
+  position: absolute;
+  top: 640px;
+  left: 300px;
+  font-size: 50px;
+  font-family: cursive;
+  background-color: white;
+  padding: 0 30px;
+  box-shadow: 4px 4px black;
+}
+
+.update{
+  position: absolute;
+  top: -190px;
+  left: -50px;
+  width: 1000px;
+}
+
+/* .update::after{
+  background-color: white;
+  margin: 10px 0 0;
+  display: block;
+  width: 500px;
+  height: 30px;
+  margin-top: 0px;
+  content: "";
+} */
+
+/* 最初のページのアニメーション */
+.image1{
+  animation-name:fadeInAnime;
+  animation-duration:2.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  animation-delay: 4s;
+}
+
+.image2{
+  animation-name:fadeUpAnime;
+  animation-duration:1.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  animation-delay: 4s;
+}
+
+.introduction{
+  animation-name:fadeLeftAnime;
+  animation-duration:1.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  animation-delay: 4s;
+}
+
+.update{
+  animation-name:fadeDownAnime;
+animation-duration:1.5s;
+animation-fill-mode:forwards;
+opacity:0;
+animation-delay: 4s;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeftAnime{
+  from {
+    opacity: 0;
+  transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateX(0);
+  }
+}
+
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+  transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/* ここまで */
+
+.introduce{
+  width: 100%;
+  margin: 200px auto;
+}
+
+.img-introduce{
+  position: relative;
+}
+
+h1{
+  max-width: 1440px;
+  width: 1440px;
+  height: 200px;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  background-image: url(./img/output-onlinepngtools\ \(2\).png);
+  font-size: 50px;
+  font-weight: bold;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* 型抜き */
+.svgSample1 text {
+  font-weight       : bold;
+  font-size         : 40px;
+  font-family       : Meiryo UI;
+  stroke            : #6666ff;
+  fill              : #ffffff;
+  letter-spacing    : 5px;
+  text-anchor       : middle;
+  dominant-baseline : alphabetic;
+}
+.svgSample1 > svg > use:nth-of-type(1) {
+  stroke-width      : 11px;
+  paint-order       : stroke;
+  stroke-linejoin   : round ;
+}
+.svgSample1 > svg > use:nth-of-type(2) {
+  stroke-width      : 0;
+}
+/* ここまで */
+
+.coverimage{
+  width: 600px;
+  height: 200px;
+}
+
+.gray{
+  width: 600px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%)
+}
+
+.POSSE1-introduction{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.introduce2{
+  width: 800px;
+  margin: 20px 60px auto auto;
+  font-size: 30px;
+  font-family: 游明朝体;
+  background-color: rgb(236, 233, 228);
+  border-radius: 5%;
+  padding: 15px;
+  /* animation-name:fadeUpAnime;
+  animation-duration:1.5s;
+  animation-fill-mode:forwards; */
+  /* animation-delay: 4s; */
+  opacity: 0;
+}
+
+.image3{
+  width: 480px;
+  border-radius: 5%;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:2.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+.introduce2::first-letter{
+  font-size: 60px;
+  font-weight: bold;
+}
+
+/* ここからswiper */
+.swiper-wraper{
+  width: 100%;
+  height: 300px;
+}
+
+.swiper-slide{
+  top: 800px;
+}
