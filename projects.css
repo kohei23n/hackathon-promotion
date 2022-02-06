@@ -34,9 +34,7 @@ a {
 /* INTRO */
 
 .intro_container {
-  background-image: url(img/bg.png);
-  background-size: cover;
-  background-position: center;
+  background-color: #87cefa;
   height: 250px;
   padding: 60px 0;
   text-align: center;
@@ -69,15 +67,15 @@ a {
 .intro_title::before {
     top: 0;
     left: 0;
-    border-top: 4px solid #0000ff;
-    border-left: 4px solid #0000ff;
+    border-top: 4px solid #000;
+    border-left: 4px solid #000;
 }
 
 .intro_title::after {
   bottom: 0;
   right: 0;
-  border-bottom: 4px solid #0000ff;
-  border-right: 4px solid #0000ff;
+  border-bottom: 4px solid #000;
+  border-right: 4px solid #000;
 }
 
 .intro_content {
