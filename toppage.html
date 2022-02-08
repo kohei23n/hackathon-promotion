@@ -4,10 +4,92 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="toppage.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <title>Document</title>
 </head>
 <body>
+  <!-- ローディング画面 -->
+  <div id="loading" class="loading">
+    <div class="spinner">
+      <img class="POSSE" src="./img/logo.png" alt="POSSE1">
+    </div>
+  </div>
+<!-- ここまで -->
+  <header>
+    <div class="header">
+      <img class="POSSE1" src="./img/logo.png" alt="POSSE1">
+      <div class="links">
+        <a href="toppage.html" class="link">HOME</a>
+        <a href="timeline.html" class="link">TIMELINE</a>
+        <a href="" class="link">PRODUCTS</a>
+        <a href="" class="link">MEMBERS</a>
+      </div>
+    </div>
+
+  </header>
+  <div class="image-container">
+    <img class="image1" src="./img/POSSE1 全体.jpeg" alt="全体写真">
+    <img class="image2" src="./img/logo.png" alt="POSSE">
+    <p class="introduction">INTRODUCTION PAGE</p>
+    <div class="update-image">
+      <img src="./img/update.PNG" alt="update yourself" class="update">
+    </div>
+  </div>
+
+  <!-- ここから画像切り抜き -->
+  <svg width="1094" height="615" viewBox="0 0 1094 615" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <clipPath id="myClip" >
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M78.8201 267.341C29.8364 238.955 0 201.305 0 160C0 71.6344 136.553 0 305 0C409.837 0 502.321 27.7478 557.219 70.0073C599.816 44.4621 666.741 28 742 28C870.682 28 975 76.1294 975 135.5C975 139.134 974.609 142.726 973.846 146.267C1046.68 185.372 1094 248.624 1094 320C1094 384.813 1054.98 442.927 993.273 482.346C1024.33 496.366 1043 514.368 1043 534C1043 578.735 946.07 615 826.5 615C723.531 615 637.352 588.106 615.407 552.069C562.24 577.073 495.052 592 422 592C296.384 592 188.106 547.863 138.645 484.25C60.6206 477.654 0 428.347 0 368.5C0 325.204 31.7279 287.424 78.8201 267.341Z" fill="#C4C4C4"/>
+    </clipPath>
+  </svg>
+  <!-- ここまで -->
   
+  <div class="introduce">
+    <div class="img-introduce">
+      <h1>
+        <!-- ここから型抜き -->
+        <div class="svgSample1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <defs>
+              <text dy="0.4em" id="outTextx">そもそもPOSSE①とは？</text>
+            </defs>
+            <use x="50%" y="50%" xlink:href="#outTextx"></use>
+            <use x="50%" y="50%" xlink:href="#outTextx"></use>
+          </svg>
+        </div>
+        <!-- ここまで -->
+      </h1>
+      <div class="coverimage">
+        <!-- <img class="gray" src="./img/4549509244264_02.jpeg" alt="gray"> -->
+      </div>
+  </div>
+  
+  <div class="POSSE1-introduction">
+      <p class="introduce2" >
+        POSSE①は現在、1.0期生5人、1.5期生10人、2.0期生16人、2.5期生15人の計46人で活動しています。日頃から切磋琢磨してプログラミングを学んでいます。POSSE②とは違い、大学1年生から大学3年生までの幅広い学年の人がいます。特に初期の立ち上げメンバーである1.0期生、1.5期生が在籍している分、先輩からのサポートが手厚いです。また、人数が46人と少人数ながら先輩たちが在籍しているので、縦の関係がしっかりと築けるのも特徴です。とても優しい先輩たちがいます。
+      </p>
+      <img class="image3" src="./img/LINE_ALBUM_220205_17.jpeg" alt="課題サポート">
+    </div>
+    </div>
+    
+  
+
+<!-- ここからswiper -->
+ <div class="swiper-container">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> 
+  <div id= "swiperWrapper" class="swiper-wrapper">
+    <div class="swiper-slide"><img src="./img/3C2E586E-AA64-4474-AFE9-65C5DCB65CA6.jpg" alt="画像1"></div>
+    <div class="swiper-slide"><img src="./img/3C2E586E-AA64-4474-AFE9-65C5DCB65CA6.jpg" alt="画像2"></div>
+    <div class="swiper-slide"><img src="./img/3C2E586E-AA64-4474-AFE9-65C5DCB65CA6.jpg" alt="画像3"></div>
+  </div>
+</div>
+<!-- ここまで -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+ <script src="./toppage.js"></script>
 </body>
 </html>
