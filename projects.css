@@ -1,25 +1,116 @@
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* background-color: #f0ffff; */
+  max-width: 1440px;
+  background-color: azure;
+  text-align: center;
 }
 
-/* header  */
+/* LOADING */
+
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #0bd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.loading {
+  position: relative;
+  animation: fadein-keyframes 1s ease 3s 1 forwards;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  /* animation: sk-scaleout 3.0s infinite ease-in-out; */
+  animation: fadein-keyframes 2s ease 2s 1 forwards;
+}
+
+.POSSE{
+  /* width: 1500px; */
+  transform: translate(-50%,-50%);
+}
+
+@keyframes fadein-keyframes {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  } 100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* HEADER  */
 
 header{
   width: 100%;
   height: 50px;
   position: fixed;
-  top: 0;
   background-color: azure;
   z-index: 2;
+  top: 0;
 }
 
-.header {
+.header{
   display: flex;
   justify-content: space-between;
   text-align: center;
+}
+
+.links {
+  display: flex;
+}
+
+.links a {
+  margin-right: 50px;
+  position: relative;
+  line-height: 50px;
+  color: black;
+  text-decoration: none;
+  font-family: "Oswald";
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  background-color: #98e7ff;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 5px;
+  transition: 0.3s;
+}
+
+.link:hover {
+  color: #696969;
+}
+
+.link:hover::after {
+  width: 100%;
+
 }
 
 .POSSE1 {
@@ -27,8 +118,138 @@ header{
   height: 50px;
 }
 
-a {
-  margin-right: 50px;
+/* ぱっと見 */
+
+.image-container{
+  position: relative;
+  margin-top: -35px;
+}
+
+.image1{
+  width: 1100px;
+  height: 650px;
+  object-fit: cover;
+  position: absolute;
+  top: 84px;
+  left: 400px;
+  clip-path: url(#myClip)
+  /* opacity: 0.8; */
+}
+
+.image2{
+  width: 750px;
+  height: 200px;
+  position: absolute;
+  top: 420px;
+  left: -20px;
+}
+
+.introduction{
+  position: absolute;
+  top: 610px;
+  left: 120px;
+  font-size: 50px;
+  font-family: "Oswald";
+  /* background-color: white;
+  padding: 0 30px;
+  box-shadow: 4px 4px black;
+  border-radius: 2px; */
+}
+
+.update{
+  position: absolute;
+  top: -100px;
+  left: -50px;
+  width: 1000px;
+}
+
+/* .update::after{
+  background-color: white;
+  margin: 10px 0 0;
+  display: block;
+  width: 500px;
+  height: 30px;
+  margin-top: 0px;
+  content: "";
+} */
+
+/* 最初のページのアニメーション */
+.image1{
+  animation-name:fadeInAnime;
+  animation-duration:2.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  animation-delay: 4s;
+}
+
+.image2{
+  animation-name:fadeUpAnime;
+  animation-duration:1.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  animation-delay: 4s;
+}
+
+.introduction{
+  animation-name:fadeLeftAnime;
+  animation-duration:1.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  animation-delay: 4s;
+}
+
+.update{
+  animation-name:fadeDownAnime;
+animation-duration:1.5s;
+animation-fill-mode:forwards;
+opacity:0;
+animation-delay: 4s;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeftAnime{
+  from {
+    opacity: 0;
+  transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateX(0);
+  }
+}
+
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+  transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
 }
 
 /* INTRO */
@@ -36,7 +257,8 @@ a {
 .intro_container {
   background-color: #87cefa;
   height: 250px;
-  padding: 60px 0;
+  margin: 500px 0;
+  /* padding: 500px 0; */
   text-align: center;
   color: #000;
 }
@@ -183,7 +405,7 @@ button.stop {
 .cursor img {
   position: absolute;
   height: 125px;
-  top: 70%;
+  top: 1500px;
   left: 55%;
   z-index: 2;
   transform: translate(-10px, -40px);

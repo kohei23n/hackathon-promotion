@@ -40,7 +40,6 @@ body{
   transform: translate(-50%,-50%);
 }
 
-
 @keyframes fadein-keyframes {
   0% {
     opacity: 1;
@@ -61,10 +60,10 @@ body{
   }
 }
 
-.loaded {
+/* .loaded {
   opacity: 0;
   visibility: hidden;
-}
+} */
 /* ここまで */
 
 body{
@@ -122,11 +121,12 @@ header{
 
 }
 
-
 .POSSE1{
   width: 200px;
   height: 50px;
 }
+
+/* ぱっと見 */
 
 .image-container{
   position: relative;
