@@ -69,7 +69,7 @@ body{
 
 body{
   max-width: 1440px;
-  background-color: azure;
+  /* background-color: azure; */
 }
 
 header{
@@ -85,6 +85,7 @@ header{
   display: flex;
   justify-content: space-between;
   text-align: center;
+  z-index: 3;
 }
 
 .links {
@@ -131,6 +132,9 @@ header{
 .image-container{
   position: relative;
   margin-top: -35px;
+  background-color: azure;
+  width: 1440px;
+  height: 820px;
 }
 
 .image1{
@@ -138,7 +142,7 @@ header{
   height: 650px;
   object-fit: cover;
   position: absolute;
-  top: 150px;
+  top: 84px;
   left: 400px;
   clip-path: url(#myClip)
   /* opacity: 0.8; */
@@ -214,6 +218,47 @@ opacity:0;
 animation-delay: 4s;
 }
 
+.fadeLeft{
+  animation-name:fadeLeftAnime;
+  animation-duration:3.0s;
+  animation-fill-mode:forwards;
+  opacity:0;
+}
+
+.fadeRight{
+  animation-name: fadeRightAnime;
+  animation-duration: 3.0s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:3.0s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+
+.fadeDown{
+  animation-name: fadeDownAnime;
+  animation-duration: 3.0s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
 @keyframes fadeInAnime{
   from {
     opacity: 0;
@@ -248,6 +293,18 @@ animation-delay: 4s;
   }
 }
 
+@keyframes fadeRightAnime{
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes fadeDownAnime{
   from {
     opacity: 0;
@@ -264,33 +321,55 @@ animation-delay: 4s;
 
 /* ABOUT TITLE */
 
-.introduce {
-  margin-top: 200px;
-  background-color: #fff;
+.first {
+  margin-top: 0px;
 }
 
 
-.introduce{
+.first{
   width: 100%;
-  margin: 200px auto;
+  margin: 0px auto;
+  height: 1750px;
 }
 
 .img-introduce{
   position: relative;
 }
 
-h1 {
+ h1{
   max-width: 1440px;
-  width: 1440px;
-  height: 200px;
-  margin: 0 auto;
+  width: 100%;
+  height: 100px;
   /* position: absolute; */
   text-align: center;
-  background-image: url(./img/output-onlinepngtools\ \(2\).png);
+  /* background-image: url(./img/output-onlinepngtools\ \(2\).png); */
   font-size: 50px;
   font-weight: bold;
   display: table-cell;
-  vertical-align: middle;
+  vertical-align: middle; 
+  /* padding-left: 50px; */
+} 
+
+h1 {
+  position: relative;
+  padding: 0.25em 0;
+}
+
+h1:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: -webkit-linear-gradient(to right, rgb(230, 90, 90), transparent);
+  background: linear-gradient(to right, rgb(230, 90, 90), transparent);
+}
+
+h1:first-letter {
+  font-size: 2em;
+  color: #ff696a;
+}
+
+text{
+  margin-left: 50px;
 }
 
 /* 型抜き */
@@ -394,18 +473,21 @@ body.appear #container{
 /* ここまで */
 
 .POSSE1-introduction{
-  display: flex;
+  /* display: flex;
   flex-direction: row-reverse;
+  flex-wrap: wrap; */
+  position: relative;
   background-color: #fff;
+  padding-bottom: 20px;
 }
 
-.introduce2{
-  width: 800px;
-  margin: 20px 60px auto auto;
-  font-size: 30px;
+.introduce2 ,.introduce3{
+  width: 400px;
+  height: 400px;
+  font-size: 20px;
   font-family: 游明朝体;
-  background-color: rgb(236, 233, 228);
-  border-radius: 5%;
+  /* background-color: rgb(236, 233, 228); */
+  /* border-radius: 5%; */
   padding: 15px;
   /* animation-name:fadeUpAnime;
   animation-duration:1.5s;
@@ -414,43 +496,130 @@ body.appear #container{
   opacity: 0;
 }
 
+.introduce2{
+  margin: 20px 100px auto auto;
+  position: absolute;
+  top: 1100px;
+  left: 910px;
+
+}
+
+.introduce3{
+  margin: 20px auto auto 60px;
+  position: absolute;
+  top: 1300px;
+  left: 60px;
+}
+
 .image3{
-  width: 480px;
-  border-radius: 5%;
-  margin-top: 20px;
-  margin-left: 20px;
+  width: 800px;
+  position: absolute;
+  top: 20px;
+  left: 100px;
+  z-index: 0;
 }
 
-.fadeUp{
-  animation-name:fadeUpAnime;
-  animation-duration:2.5s;
-  animation-fill-mode:forwards;
-  opacity:0;
-  }
-
-@keyframes fadeUpAnime{
-  from {
-    opacity: 0;
-  transform: translateY(100px);
-  }
-
-  to {
-    opacity: 1;
-  transform: translateY(0);
-  }
+.image4{
+  width: 1000px;
+  position: absolute;
+  top: 550px;
+  left: 400px;
+  z-index: 1;
 }
+
+.image5{
+  width: 700px;
+  position: absolute;
+  top: 1000px;
+  left: 100px;
+  z-index: 2;
+}
+
+.image6{
+  width: 800px;
+  position: absolute;
+  top: 20px;
+  left: 550px;
+  z-index: 0;
+}
+
+.image7{
+  width: 1200px;
+  height: 600px;
+  object-fit: cover;
+  position: absolute;
+  top: 550px;
+  left: 50px;
+  z-index: 1;
+}
+
+.image8{
+  width: 900px;
+  position: absolute;
+  top: 1050px;
+  left: 600px;
+  z-index: 2;
+}
+
+
 
 .introduce2::first-letter{
   font-size: 60px;
   font-weight: bold;
 }
 
+.introduce3::first-letter{
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.good{
+  margin-bottom: 200px;
+  width: 100%;
+  height: 1700px;
+}
+
 /* ここからswiper */
+.swiper-container{
+  /* position: absolute; 
+  top: 50px; */
+}
+
 .swiper-wraper{
   width: 100%;
-  height: 300px;
 }
 
 .swiper-slide{
-  top: 800px;
+  margin: 50px 10px 50px;
+}
+
+.tukareta{
+  position: relative;
+}
+
+.realevent{
+  width: 500px;
+  height: 400px;
+  background-color: rgb(255, 251, 246);
+  /* margin: -550px auto auto auto; */
+  text-align: center;
+  padding: 30px;
+  font-size: 20px;
+  line-height: 50px;
+  z-index: 1;
+  position: absolute;
+  top: 100px;
+  left: 30%;
+
+}
+
+.realevent::first-letter{
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.riaibe{
+  position: relative;
+  width: 100%;
+  height: 600px;
 }
