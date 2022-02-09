@@ -302,7 +302,6 @@ h1 {
   fill              : #ffffff;
   letter-spacing    : 5px;
   text-anchor       : middle;
-  dominant-baseline : alphabetic;
 }
 .svgSample1 > svg > use:nth-of-type(1) {
   stroke-width      : 11px;
