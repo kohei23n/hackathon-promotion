@@ -40,7 +40,6 @@ body{
   transform: translate(-50%,-50%);
 }
 
-
 @keyframes fadein-keyframes {
   0% {
     opacity: 1;
@@ -61,10 +60,10 @@ body{
   }
 }
 
-.loaded {
+/* .loaded {
   opacity: 0;
   visibility: hidden;
-}
+} */
 /* ここまで */
 
 body{
@@ -122,11 +121,12 @@ header{
 
 }
 
-
 .POSSE1{
   width: 200px;
   height: 50px;
 }
+
+/* ぱっと見 */
 
 .image-container{
   position: relative;
@@ -302,7 +302,6 @@ h1 {
   fill              : #ffffff;
   letter-spacing    : 5px;
   text-anchor       : middle;
-  dominant-baseline : alphabetic;
 }
 .svgSample1 > svg > use:nth-of-type(1) {
   stroke-width      : 11px;
@@ -388,3 +387,95 @@ h1 {
 .swiper-slide{
   top: 800px;
 }
+
+/* FOOTER */
+
+.footer_cont {
+  padding:  2% 3%;
+  text-align: center;
+}
+
+.footer_cont a {
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-family: "Oswald";
+}
+
+.footer_cont img {
+  width: 300px;
+  height: 100%;
+}
+
+.footer_cont a:hover {
+  opacity: 0.8;
+}
+
+.footer_sns {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.footer_sns ul {
+  margin: 20px 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.footer_sns ul li {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 100%;
+  background-color: #98e7ff;
+}
+
+.footer_sns ul li a {
+  text-decoration: none;
+  /* font-size: 20px; */
+  display: block;
+}
+
+.footer_sns ul li a i {
+  line-height: 50px;
+}
+
+.fa-twitter:hover {
+  color: #1c9bef;
+}
+
+.fa-instagram:hover {
+  color: #dc2a7b;
+}
+
+.fa-line:hover {
+  color: #09b53c;
+}
+
+.footer_map {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.footer_map ul {
+  text-align: center;
+}
+
+.footer_map li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.footer_map a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer_map a:hover {
+  color: #696969;
+}
+

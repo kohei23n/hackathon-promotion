@@ -1,0 +1,682 @@
+body {
+  max-width: 1440px;
+  background-color: azure;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* LOADING */
+
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #0bd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.loading {
+  position: relative;
+  animation: fadein-keyframes 1s ease 3s 1 forwards;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  /* animation: sk-scaleout 3.0s infinite ease-in-out; */
+  animation: fadein-keyframes 2s ease 2s 1 forwards;
+}
+
+.POSSE{
+  /* width: 1500px; */
+  transform: translate(-50%,-50%);
+}
+
+@keyframes fadein-keyframes {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  } 100% {
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* HEADER  */
+
+header{
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background-color: azure;
+  z-index: 2;
+  top: 0;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.links {
+  display: flex;
+}
+
+.links a {
+  margin-right: 50px;
+  position: relative;
+  line-height: 50px;
+  color: black;
+  text-decoration: none;
+  font-family: "Oswald";
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  background-color: #98e7ff;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 5px;
+  transition: 0.3s;
+}
+
+.link:hover {
+  color: #696969;
+}
+
+.link:hover::after {
+  width: 100%;
+
+}
+
+.POSSE1 {
+  width: 200px;
+  height: 50px;
+}
+
+/* ぱっと見 */
+
+.image-container{
+  position: relative;
+  margin-top: -35px;
+}
+
+.image1{
+  width: 1100px;
+  height: 650px;
+  object-fit: cover;
+  position: absolute;
+  top: 84px;
+  left: 400px;
+  clip-path: url(#myClip)
+  /* opacity: 0.8; */
+}
+
+.image2{
+  width: 750px;
+  height: 200px;
+  position: absolute;
+  top: 420px;
+  left: -20px;
+}
+
+.introduction{
+  position: absolute;
+  top: 610px;
+  left: 120px;
+  font-size: 50px;
+  font-family: "Oswald";
+  /* background-color: white;
+  padding: 0 30px;
+  box-shadow: 4px 4px black;
+  border-radius: 2px; */
+}
+
+.update{
+  position: absolute;
+  top: -100px;
+  left: -50px;
+  width: 1000px;
+}
+
+/* .update::after{
+  background-color: white;
+  margin: 10px 0 0;
+  display: block;
+  width: 500px;
+  height: 30px;
+  margin-top: 0px;
+  content: "";
+} */
+
+/* 最初のページのアニメーション */
+.image1{
+  animation-name:fadeInAnime;
+  animation-duration:2.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  animation-delay: 4s;
+}
+
+.image2{
+  animation-name:fadeUpAnime;
+  animation-duration:1.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  animation-delay: 4s;
+}
+
+.introduction{
+  animation-name:fadeLeftAnime;
+  animation-duration:1.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  animation-delay: 4s;
+}
+
+.update{
+  animation-name:fadeDownAnime;
+animation-duration:1.5s;
+animation-fill-mode:forwards;
+opacity:0;
+animation-delay: 4s;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeftAnime{
+  from {
+    opacity: 0;
+  transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateX(0);
+  }
+}
+
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+  transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/* INTRO */
+
+.intro_container {
+  background-color: #98e7ff;
+  /* background-color: #e0fffe; */
+  height: 430px;
+  margin-top: 150px;
+  padding: 30px 0;
+  text-align: center;
+  color: #000;
+}
+
+.intro_title {
+  margin: 0 auto;
+  position: relative;
+  width: 860px;
+  max-width: calc(100% - 40px);
+  padding: 15px 0px;
+  box-sizing: border-box;
+}
+
+.intro_title h1 {
+  color: #ff6865;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  text-align: center;
+}
+
+.intro_title h1:before, h1:after { 
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-size: 1.0em;
+  color: #ff6a6a;
+}
+
+.intro_title h1:before {
+  content:"\f053";/*アイコン種類*/
+  padding-right: 1em;
+}
+
+.intro_title h1:after {
+  content:"\f054";/*アイコン種類*/
+  padding-left: 1em;
+}
+
+.intro_box {
+  width: 1170px;
+  max-width: calc(100% - 40px);
+  margin: 30px auto;
+  padding: 30px;
+  border: 2px solid #ff6a6a;
+  background-color: azure;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.intro_box p:nth-child(1) {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.intro_box p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.intro_skill {
+  /* padding: 10px; */
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  width: 130px;
+  height: 130px;
+}
+
+.intro_skill p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.underline {
+  font-weight: bold;
+  background: linear-gradient(transparent 70%, #98e7ff 70%);
+}
+
+/* websites */
+
+.websites_container {
+  background-color: azure;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.websites_title {
+  margin: 0 auto;
+  position: relative;
+  width: 860px;
+  max-width: calc(100% - 40px);
+  padding: 15px 0px;
+  box-sizing: border-box;
+}
+
+.websites_title h1 {
+  color: #ff6865;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  text-align: center;
+}
+
+.websites_title h1:before, h1:after { 
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-size: 1.0em;
+  color: #ff6a6a;
+}
+
+.websites_title h1:before {
+  content:"\f053";/*アイコン種類*/
+  padding-right: 1em;
+}
+
+.websites_title h1:after {
+  content:"\f054";/*アイコン種類*/
+  padding-left: 1em;
+}
+
+.websites_box {
+  width: 1170px;
+  max-width: calc(100% - 40px);
+  margin: 30px auto;
+  background-color: azure;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  position: relative;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+
+.websites_flex {
+  display: flex;
+}
+
+.websites_flex img, .websites_flex_right img {
+  border: 1px solid #ff6865;
+  border-radius: 3px;
+}
+
+.websites_flex_right {
+  display: flex;
+  justify-content: right;
+}
+
+
+.websites_flex_right img, .websites_flex img {
+  width: 70%;
+}
+
+.websites_text {
+  position: absolute;
+  font-size: 36px;
+  top: 40%;
+  left: 60%;
+  padding: 30px 30px 20px;
+  width: 26%;
+}
+
+.websites_text_left {
+  position: absolute;
+  font-size: 36px;
+  top: 40%;
+  left: 10%;
+  padding: 30px 30px 20px;
+  width: 26%;
+}
+
+.websites_text a, .websites_text_left a {
+  text-decoration: none;
+}
+
+.websites_text p, .websites_text_left p {
+  opacity: 1;
+  z-index: 2;
+  color: #fff;
+  background-color: #ff6864;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* もぐらたたきゲーム */
+
+.game {
+  background-color: #e0ffff;
+  margin-top: 0;
+  padding-bottom: 5%;
+}
+
+.game_title {
+  margin: 0 auto;
+  position: relative;
+  width: 860px;
+  max-width: calc(100% - 40px);
+  padding: 15px 0px;
+  box-sizing: border-box;
+}
+
+.game_title h1, .game_title h2 {
+  color: #ff6865;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  text-align: center;
+}
+
+
+.game_title h1:before, h1:after { 
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-size: 1.0em;
+  color: #ff6a6a;
+}
+
+.game_title h1:before {
+  content:"\f053";/*アイコン種類*/
+  padding-right: 1em;
+}
+
+.game_title h1:after {
+  content:"\f054";/*アイコン種類*/
+  padding-left: 1em;
+}
+
+.container {
+  background-color: #99e6ff;
+  color: #000;
+  margin: 0 25%;
+  padding: 1% 0;
+  border-radius: 10px;
+  border: 1px solid #000;
+  cursor: none;
+}
+
+.score {
+  font-size: 1.3em;
+  margin: 1em 0;
+  text-align: center;
+}
+
+.holesCont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7em;
+  justify-items: center;
+}
+
+.hole {
+  position: relative;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background-color: #f0ffff;
+  overflow: hidden;
+}
+
+.mole {
+  position: absolute;
+  z-index: 1;
+  height: 120px;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: appear 0.3s linear;
+  pointer-events: none;
+}
+
+@keyframes appear {
+  from {
+    bottom: -60px;
+  }
+  to {
+    bottom: 15%;
+  }
+}
+
+.buttons {
+  margin: 2em 0 1em 0;
+  text-align: center;
+}
+
+.buttons button {
+  padding: 15px 45px;
+  background-color: inherit;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 3px;
+  outline: none;
+}
+
+button.stop {
+  display: none;
+}
+
+.cursor img {
+  position: absolute;
+  height: 125px;
+  top: 3100px;
+  left: 55%;
+  z-index: 2;
+  transform: translate(-10px, -40px);
+  pointer-events: none;
+}
+
+@keyframes hit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-30deg);
+  }
+}
+
+/* FOOTER */
+
+.footer_cont {
+  padding:  2% 3%;
+  text-align: center;
+}
+
+.footer_cont a {
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-family: "Oswald";
+}
+
+.footer_cont img {
+  width: 300px;
+  height: 100%;
+}
+
+.footer_cont a:hover {
+  opacity: 0.8;
+}
+
+.footer_sns {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.footer_sns ul {
+  margin: 20px 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.footer_sns ul li {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 100%;
+  background-color: #98e7ff;
+}
+
+.footer_sns ul li a {
+  text-decoration: none;
+  /* font-size: 20px; */
+  display: block;
+}
+
+.footer_sns ul li a i {
+  line-height: 50px;
+}
+
+.fa-twitter:hover {
+  color: #1c9bef;
+}
+
+.fa-instagram:hover {
+  color: #dc2a7b;
+}
+
+.fa-line:hover {
+  color: #09b53c;
+}
+
+.footer_map {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.footer_map ul {
+  text-align: center;
+}
+
+.footer_map li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.footer_map a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer_map a:hover {
+  color: #696969;
+}
+
