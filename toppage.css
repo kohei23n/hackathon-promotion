@@ -767,7 +767,7 @@ a.btn-malformation:hover {
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
 }
 
 /* 背景用*/
