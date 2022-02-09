@@ -597,7 +597,7 @@ body.appear #container {
   text-align: center;
   padding: 30px;
   font-size: 20px;
-  line-height: 50px;
+  line-height: 40px;
   z-index: 1;
   position: absolute;
   top: 100px;
@@ -662,6 +662,9 @@ h3::after {
   text-align: center;
 }
 
+.form2{
+  margin-bottom: 50px;
+}
 .googleform{
   margin: 50px auto;
   font-size: 35px;
@@ -674,3 +677,379 @@ h3::after {
   background-color: #fff;
   color: #696969;
 }
+
+/* ボタンのcss */
+/* *,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn-malformation {
+  font-size: 2rem;
+
+  padding: 3rem 4rem;
+
+  color: #fff;
+  border-radius: 100% 80px / 80px 100%;
+  background-color: #eb6100;
+}
+
+a.btn-malformation:hover {
+  color: #fff;
+  border-radius: 60% 80% / 100% 80%;
+}
+
+a.btn-malformation {
+  font-size: 2rem;
+
+  padding: 3rem 4rem;
+
+  color: #fff;
+  border-radius: 100% 80px / 80px 100%;
+}
+
+a.btn-malformation:hover {
+  color: #fff;
+  border-radius: 60% 80% / 100% 80%;
+}
+
+.btn-malformation--pastel {
+  background: #fca1a1;
+  background: -webkit-linear-gradient(-45deg, #fca1a1 40%, #fcfc5d 100%);
+  background: -webkit-linear-gradient(315deg, #fca1a1 40%, #fcfc5d 100%);
+  background: linear-gradient(135deg, #fca1a1 40%, #fcfc5d 100%);
+  -webkit-box-shadow: 30px 10px 0 #fefeb3;
+  box-shadow: 30px 10px 0 #fefeb3;
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fca1a1', endColorstr='#fcfc5d', GradientType=1);
+} */
+
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+/* 背景用*/
+body {
+  padding: 30px;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 4.0rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 6rem 8rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn-border-shadow {
+  padding: calc(1.5rem - 12px) 3rem 1.5rem;
+
+  background: #fff;
+}
+
+a.btn-border-shadow:before {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+
+  width: 100%;
+  height: 100%;
+
+  content: "";
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  border: 3px solid #000;
+  border-radius: 0.5rem;
+}
+
+a.btn-border-shadow:hover {
+  padding: calc(1.5rem - 6px) 3rem;
+}
+
+a.btn-border-shadow:hover:before {
+  top: 0;
+  left: 0;
+}
+
+a.btn-border-shadow--color2 {
+  border-radius: 100vh;
+}
+
+a.btn-border-shadow--color2:before {
+  border-radius: 100vh;
+  -webkit-box-shadow: 3px 3px 0 #ff696a;
+  box-shadow: 3px 3px 0 #ff696a;
+}
+
+.btn:hover{
+  background-color: #98e7ff;
+  color: #fff;
+}
+
+/* @import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn--circle {
+  width: 140px;
+  height: 140px;
+  padding: 20px 0 0;
+  border-radius: 50%;
+  color: #fff;
+  background: #eb6877;
+  -webkit-box-shadow: 0 7px 0 #e53b4e;
+  box-shadow: 0 7px 0 #e53b4e;
+}
+
+a.btn--circle i {
+  font-size: 150%;
+}
+
+.fa-position-bottom {
+  position: absolute;
+  bottom: 1rem;
+  left: calc(50% - 0.5rem);
+}
+
+a.btn--circle:hover {
+  -webkit-transform: translate(0, 4px);
+  transform: translate(0, 4px);
+  color: #fff;
+  -webkit-box-shadow: 0 3px 0 #e53b4e;
+  box-shadow: 0 3px 0 #e53b4e;
+} */
+
+/* *{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+} */
+
+/* .button{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ff696a;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+} */
+
+.button:hover{
+  /* background-color: #98e7ff; */
+  /* color: #fff; */
+}
+
+/*== 無限に波紋が広がる */
+
+.btnripple2{
+  /*波紋の基点とするためrelativeを指定*/
+position: relative;
+  /*波紋の形状*/
+display:inline-block;
+background:#ff696a;
+width:120px;
+height:120px;
+border-radius: 50%;
+color:#000;
+bottom: 40px;
+right: 40px;
+position: fixed;
+z-index: 4;
+  outline: none;
+  /*アニメーションの設定*/
+  transition: all .3s;
+}
+
+/*hoverした際の背景色の設定*/
+.btnripple2:hover{
+background:#98e7ff;  
+}
+
+/*波形を2つ設定*/
+.btnripple2::after,
+.btnripple2::before {
+  content: '';
+  /*絶対配置で波形の位置を決める*/
+  position: absolute;
+  left: -25%;
+  top: -25%;
+  /*波形の形状*/
+  border: 1px solid #ff696a;
+  width: 150%;
+  height: 150%;
+  border-radius: 50%;
+  /*はじめは不透明*/
+  opacity: 1;
+  /*ループするアニメーションの設定*/
+  animation:1s circleanime linear infinite;
+}
+
+/*波形の2つ目は0.5秒遅らせてアニメーション*/
+.btnripple2::before {
+  animation-delay:.5s; 
+}
+
+/*波形のアニメーション*/
+@keyframes circleanime{
+0%{
+  transform: scale(0.68);
+}
+100%{
+  transform: scale(1.2);
+  opacity: 0;
+}
+}
+
+.btnripple2:hover:after,
+.btnripple2:hover:before{
+  border: 1px solid #98e7ff;
+}
+
+/*中央矢印*/
+.btnripple2 span::after {
+  /* content: 'フォームはこちら'; */
+  /*絶対配置で矢印の位置を決める*/
+  /* position: absolute; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translateY(-50%) translateX(-50%); */
+  /* -webkit- transform: translateY(-50%) translateX(-50%); */
+  /*矢印の形状*/
+  /* border: 14px solid transparent;
+  border-top-width: 10px;
+  border-bottom-width: 10px;
+  border-left-color: #fff; */
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+  /* vertical-align:middle; 
+  padding: 100px 0;
+  text-align: center; */
+}
+
+p{
+  /* margin: 0 0 10px 0; */
+}
+
+.span{
+  position: absolute;
+  top: 72%;
+  left: 63%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit- transform: translateY(-50%) translateX(-50%);
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100px;
+  height: 100px;
+}
+
+.span:hover{
+  color: #fff;
+}
+
