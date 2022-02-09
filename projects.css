@@ -2,6 +2,7 @@ body {
   max-width: 1440px;
   background-color: azure;
   text-align: center;
+  box-sizing: border-box;
 }
 
 /* LOADING */
@@ -255,16 +256,17 @@ animation-delay: 4s;
 /* INTRO */
 
 .intro_container {
-  background-color: #87cefa;
-  height: 250px;
-  margin: 500px 0;
-  /* padding: 500px 0; */
+  background-color: #98e7ff;
+  /* background-color: #e0fffe; */
+  height: 430px;
+  margin-top: 150px;
+  padding: 30px 0;
   text-align: center;
   color: #000;
 }
 
 .intro_title {
-  margin: 20px auto 0 auto;
+  margin: 0 auto;
   position: relative;
   width: 860px;
   max-width: calc(100% - 40px);
@@ -272,64 +274,230 @@ animation-delay: 4s;
   box-sizing: border-box;
 }
 
-.intro_title h2 {
-  margin-top: 20px;
+.intro_title h1 {
+  color: #ff6865;
+  margin-top: 0;
   margin-bottom: 10px;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  text-align: center;
 }
 
-.intro_title::before, .intro_title::after {
-  position: absolute;
-  content: "";
-  width: 50px;
-  height: 50px;
-  box-sizing: border-box;
+.intro_title h1:before, h1:after { 
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-size: 1.0em;
+  color: #ff6a6a;
 }
 
-.intro_title::before {
-    top: 0;
-    left: 0;
-    border-top: 4px solid #000;
-    border-left: 4px solid #000;
+.intro_title h1:before {
+  content:"\f053";/*アイコン種類*/
+  padding-right: 1em;
 }
 
-.intro_title::after {
-  bottom: 0;
-  right: 0;
-  border-bottom: 4px solid #000;
-  border-right: 4px solid #000;
+.intro_title h1:after {
+  content:"\f054";/*アイコン種類*/
+  padding-left: 1em;
 }
 
-.intro_content {
-  padding: 0;
+.intro_box {
+  width: 1170px;
+  max-width: calc(100% - 40px);
+  margin: 30px auto;
+  padding: 30px;
+  border: 2px solid #ff6a6a;
+  background-color: azure;
+  border-radius: 5px;
+  text-align: center;
 }
 
-.intro_content p {
-  margin-bottom: 2.4rem;
+.intro_box p:nth-child(1) {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.intro_box p {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.intro_skill {
+  /* padding: 10px; */
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  width: 130px;
+  height: 130px;
+}
+
+.intro_skill p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
   font-weight: 300;
-  font-size: 1.5rem;
 }
 
 .underline {
   font-weight: bold;
-  background: linear-gradient(transparent 70%, #0000ff 70%);
+  background: linear-gradient(transparent 70%, #98e7ff 70%);
+}
+
+/* websites */
+
+.websites_container {
+  background-color: azure;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.websites_title {
+  margin: 0 auto;
+  position: relative;
+  width: 860px;
+  max-width: calc(100% - 40px);
+  padding: 15px 0px;
+  box-sizing: border-box;
+}
+
+.websites_title h1 {
+  color: #ff6865;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  text-align: center;
+}
+
+.websites_title h1:before, h1:after { 
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-size: 1.0em;
+  color: #ff6a6a;
+}
+
+.websites_title h1:before {
+  content:"\f053";/*アイコン種類*/
+  padding-right: 1em;
+}
+
+.websites_title h1:after {
+  content:"\f054";/*アイコン種類*/
+  padding-left: 1em;
+}
+
+.websites_box {
+  width: 1170px;
+  max-width: calc(100% - 40px);
+  margin: 30px auto;
+  background-color: azure;
+  border-radius: 5px;
+  text-align: center;
+  display: block;
+  position: relative;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+
+.websites_flex {
+  display: flex;
+}
+
+.websites_flex img, .websites_flex_right img {
+  border: 1px solid #ff6865;
+  border-radius: 3px;
+}
+
+.websites_flex_right {
+  display: flex;
+  justify-content: right;
+}
+
+
+.websites_flex_right img, .websites_flex img {
+  width: 70%;
+}
+
+.websites_text {
+  position: absolute;
+  font-size: 36px;
+  top: 40%;
+  left: 60%;
+  padding: 30px 30px 20px;
+  width: 26%;
+}
+
+.websites_text_left {
+  position: absolute;
+  font-size: 36px;
+  top: 40%;
+  left: 10%;
+  padding: 30px 30px 20px;
+  width: 26%;
+}
+
+.websites_text a, .websites_text_left a {
+  text-decoration: none;
+}
+
+.websites_text p, .websites_text_left p {
+  opacity: 1;
+  z-index: 2;
+  color: #fff;
+  background-color: #ff6864;
+  border-radius: 5px;
+  text-align: center;
 }
 
 /* もぐらたたきゲーム */
 
 .game {
   background-color: #e0ffff;
+  margin-top: 0;
+  padding-bottom: 5%;
 }
 
-.heading {
-  font-size: 2em;
-  margin: 0;
+.game_title {
+  margin: 0 auto;
+  position: relative;
+  width: 860px;
+  max-width: calc(100% - 40px);
+  padding: 15px 0px;
+  box-sizing: border-box;
+}
+
+.game_title h1, .game_title h2 {
+  color: #ff6865;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
   text-align: center;
 }
 
-.heading p {
-  margin: 0;
-  padding: 20px 0;
+
+.game_title h1:before, h1:after { 
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-size: 1.0em;
+  color: #ff6a6a;
+}
+
+.game_title h1:before {
+  content:"\f053";/*アイコン種類*/
+  padding-right: 1em;
+}
+
+.game_title h1:after {
+  content:"\f054";/*アイコン種類*/
+  padding-left: 1em;
 }
 
 .container {
@@ -405,7 +573,7 @@ button.stop {
 .cursor img {
   position: absolute;
   height: 125px;
-  top: 1500px;
+  top: 3100px;
   left: 55%;
   z-index: 2;
   transform: translate(-10px, -40px);
@@ -420,3 +588,95 @@ button.stop {
     transform: rotate(-30deg);
   }
 }
+
+/* FOOTER */
+
+.footer_cont {
+  padding:  2% 3%;
+  text-align: center;
+}
+
+.footer_cont a {
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-family: "Oswald";
+}
+
+.footer_cont img {
+  width: 300px;
+  height: 100%;
+}
+
+.footer_cont a:hover {
+  opacity: 0.8;
+}
+
+.footer_sns {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.footer_sns ul {
+  margin: 20px 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.footer_sns ul li {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 100%;
+  background-color: #98e7ff;
+}
+
+.footer_sns ul li a {
+  text-decoration: none;
+  /* font-size: 20px; */
+  display: block;
+}
+
+.footer_sns ul li a i {
+  line-height: 50px;
+}
+
+.fa-twitter:hover {
+  color: #1c9bef;
+}
+
+.fa-instagram:hover {
+  color: #dc2a7b;
+}
+
+.fa-line:hover {
+  color: #09b53c;
+}
+
+.footer_map {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.footer_map ul {
+  text-align: center;
+}
+
+.footer_map li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.footer_map a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer_map a:hover {
+  color: #696969;
+}
+

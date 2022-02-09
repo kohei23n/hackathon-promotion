@@ -1,3 +1,11 @@
+/* トップに戻る */
+
+// $(function () {
+//   $("html,body").animate({ scrollTop: 0 }, "1");
+// });
+
+/* ゲーム */
+
 const score = document.querySelector(".score span");
 const holes = document.querySelectorAll(".hole");
 const playBtn = document.querySelector(".buttons .play");
