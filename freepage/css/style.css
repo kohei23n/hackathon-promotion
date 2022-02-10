@@ -359,9 +359,11 @@ header {
 }
 .page-title {
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 1.5rem;
   font-weight: normal;
   margin-bottom: 30px;
+  margin-top: 30px;
+  font-weight: bold;
 }
 
 .intro_title {
@@ -427,11 +429,29 @@ TOP、PRODUCTS
   display: inline-block;          /* 複数の画像を横に並べたい場合 */
 }
 
-
+/* .content-wrapper{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+} */
 /*
 vertical-align: top;
 画像の下にできる隙間を消す
 */
+
+.link-text{
+  border: #000 1px solid;
+  width: 200px;
+  margin: 0 auto;
+  color: #000;
+  text-decoration: none;
+}
+
+.link-text:hover{
+  color: #fff;
+  background-color: #000;
+}
+
 .product-list img {
   margin-bottom: 10px;
   vertical-align: top;
@@ -457,10 +477,10 @@ vertical-align: top;
 ITEM
 -------------------------------------------*/
 #item {
-  max-width: 800px;
+  max-width: 1000px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 60px;
+  margin: 0 auto 60px auto;
 }
 #item .item-text {
   width: 42%;
@@ -484,7 +504,8 @@ text-align: justify;
   width: 70%;
 }
 #item .item-img {
-  width: 50%;
+  width: 75%;
+  max-width: 1440px;
 }
 
 /* FORM */
