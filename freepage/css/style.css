@@ -3,6 +3,8 @@
 html {
   font-size: 100%;
 }
+
+
 /*
 フッターを画面下に配置するために、
 「position: relative;」を設定
@@ -10,22 +12,331 @@ html {
 */
 body {
   color: #333;
-  font-size: 0.875rem;
+  /* background-color: #98e7ff; */
+  /* font-size: 0.875rem; */
   min-height: 100vh;
   position: relative;
 }
-a {
+
+.bg_color {
+  background-color: #98e7ff;
+}
+
+/* ローディング画面 */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color: #0bd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.loading {
+  position: relative;
+  animation: fadein-keyframes 1s ease 3s 1 forwards;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  /* animation: sk-scaleout 3.0s infinite ease-in-out; */
+  animation: fadein-keyframes 2s ease 2s 1 forwards;
+}
+
+.POSSE {
+  /* width: 1500px; */
+  transform: translate(-50%, -50%);
+}
+
+@keyframes fadein-keyframes {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+/* ここまで */
+/* ローディングアニメーション */
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+/* ここまで */
+
+header {
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  background-color: azure;
+  z-index: 3;
+  top: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  z-index: 3;
+}
+
+.links {
+  display: flex;
+}
+
+.links a {
+  margin-right: 50px;
+  position: relative;
+  line-height: 50px;
+  color: black;
+  text-decoration: none;
+  font-family: "Oswald";
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  background-color: #98e7ff;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: 5px;
+  transition: 0.3s;
+}
+
+.link:hover {
+  color: #696969;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.POSSE1 {
+  width: 200px;
+  height: 50px;
+}
+
+.image-container {
+  position: relative;
+  margin-top: -35px;
+  background-color: azure;
+  width: 1440px;
+  height: 820px;
+}
+
+.image1 {
+  width: 1100px;
+  height: 650px;
+  object-fit: cover;
+  position: absolute;
+  top: 84px;
+  left: 400px;
+  clip-path: url(#myClip);
+  /* opacity: 0.8; */
+}
+
+.image2 {
+  width: 750px;
+  height: 200px;
+  position: absolute;
+  top: 420px;
+  left: -20px;
+}
+
+.introduction {
+  position: absolute;
+  top: 610px;
+  left: 120px;
+  font-size: 50px;
+  font-family: "Oswald";
+  /* background-color: white;
+  padding: 0 30px;
+  box-shadow: 4px 4px black;
+  border-radius: 2px; */
+}
+
+.update {
+  position: absolute;
+  top: -100px;
+  left: -50px;
+  width: 1000px;
+}
+
+/* .update::after{
+  background-color: white;
+  margin: 10px 0 0;
+  display: block;
+  width: 500px;
+  height: 30px;
+  margin-top: 0px;
+  content: "";
+} */
+
+/* 最初のページのアニメーション */
+.image1 {
+  animation-name: fadeInAnime;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 4s;
+}
+
+.image2 {
+  animation-name: fadeUpAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 4s;
+}
+
+.introduction {
+  animation-name: fadeLeftAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 4s;
+}
+
+.update {
+  animation-name: fadeDownAnime;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 4s;
+}
+
+.fadeLeft {
+  animation-name: fadeLeftAnime;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeRight {
+  animation-name: fadeRightAnime;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.fadeDown {
+  animation-name: fadeDownAnime;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeftAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRightAnime {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeDownAnime {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ここまで */
+
+
+.product-list a {
   color: #333;
   text-decoration: none;
   transition: all 0.5s;
 }
-a:hover {
+.product-list a:hover {
   opacity: 0.7;
 }
-img {
+.product-list img {
   max-width: 100%;
 }
-li {
+.product-list li {
   list-style: none;
 }
 /*
@@ -37,144 +348,59 @@ li {
   margin: 0 auto;
   padding: 0 40px;
 }
-.content {
+/* .content {
   padding-top: 120px;
   padding-bottom: 160px;
-}
+} */
 .site-title a {
   width: 180px;
   line-height: 1px;
   display: block;
 }
 .page-title {
+  text-align: center;
   font-size: 0.875rem;
   font-weight: normal;
   margin-bottom: 30px;
 }
 
-/*-------------------------------------------
-ヘッダー
--------------------------------------------*/
-/*
-「position: fixed;」でヘッダーを固定し、「z-index: 10;」で前面に表示
-※他のコンテンツでpositionをrelative、absolute、fixedのいずれかに
-設定している場合は、z-indexの数値が大きい方が前面に表示される
-*/
-/* #header {
-  width: 100%;
-  height: 80px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 10
-} */
-/*
-ハンバーガーメニュー
-メニューが閉じている時は、「left: -300px;」で画面左に隠し、
-「opacity: 0;」で非表示にしている
-*/
-/* #navi {
-  position: fixed;
-  top: 0;
-  left: -300px;
-  width: 300px;
-  color: #fff;
-  padding: 36px 50px;
-  transition: all 0.5s;
-  z-index: 20;
-  opacity: 0;
-}
-#navi a {
-  color: #fff;
-}
-#navi li {
-  margin-bottom: 14px;
-} */
-/*
-ハンバーガーメニュー
-メニューが開いている時は、「left: 0;」「opacity: 1;」で
-画面左に表示する
-*/
-/* .open #navi {
-  left: 0;
-  opacity: 1;
-}
-.toggle_btn {
-  width: 30px;
-  height: 30px;
+.intro_title {
+  margin: 0 auto;
   position: relative;
-  transition: all 0.5s;
-  cursor: pointer;
-  z-index: 20;
-} */
-/*
-ハンバーガーメニューの線の設定（メニューが閉じている時）
-*/
-/* .toggle_btn span {
-  display: block;
-  position: absolute;
-  width: 30px;
-  height: 2px;
-  background-color: #333;
-  border-radius: 4px;
-  transition: all 0.5s;
+  width: 860px;
+  max-width: calc(100% - 40px);
+  padding: 15px 0px;
+  box-sizing: border-box;
 }
-/*
-1本目の線の位置を設定
-*/
-/*.toggle_btn span:nth-child(1) {
-  top: 10px;
-} */
-/*
-2本目の線の位置を設定
-*/
-/* .toggle_btn span:nth-child(2) {
-  bottom: 10px;
-} */
-/*
-ハンバーガーメニューの線の設定（メニューが開いている時）
-線の色を白に変更
-*/
-/* .open .toggle_btn span {
-  background-color: #fff;
-} */
-/*
-1本目の線を-45度回転
-*/
-/* .open .toggle_btn span:nth-child(1) {
-  -webkit-transform: translateY(4px) rotate(-45deg);
-  transform: translateY(4px) rotate(-45deg);
-} */
-/*
-2本目の線を45度回転
-*/
-/* .open .toggle_btn span:nth-child(2) {
-  -webkit-transform: translateY(-4px) rotate(45deg);
-  transform: translateY(-4px) rotate(45deg);
+
+.intro_title h1 {
+  color: #ff6865;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  text-align: center;
 }
-#mask {
-  display: none;
-  transition: all 0.5s;
-} */
-/*
-メニューを開いている時は、全体を黒背景にする
-*/
-/* .open #mask {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: .8;
-  z-index: 10;
-  cursor: pointer;
-} */
+
+.intro_title h1:before, h1:after { 
+  position: relative;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: inline-block;
+  font-size: 1.0em;
+  color: #ff6a6a;
+}
+
+.intro_title h1:before {
+  content:"\f053";/*アイコン種類*/
+  padding-right: 1em;
+}
+
+.intro_title h1:after {
+  content:"\f054";/*アイコン種類*/
+  padding-left: 1em;
+}
+
 
 /*-------------------------------------------
 TOP、PRODUCTS
@@ -211,7 +437,9 @@ vertical-align: top;
   vertical-align: top;
 }
 .product-list p {
-  font-size: 0.75rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #ff6865;
 }
 .link-text {
   display: block;
@@ -259,81 +487,232 @@ text-align: justify;
   width: 50%;
 }
 
+/* FORM */
 
-/*-------------------------------------------
-ABOUT
--------------------------------------------*/
-/* #about {
-  max-width: 600px;
-}
-#about p {
-  line-height: 1.9;
-  margin-bottom: 30px;
-} */
-
-/*-------------------------------------------
-COMPANY
--------------------------------------------*/
-/* #company {
-  max-width: 600px;
-}
-#company dl {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-#company dt {
-  width: 30%;
-  border-bottom: solid 1px #dcdbdb;
-  padding: 20px 10px;
-}
-#company dt:last-of-type {
-  border-bottom: none;
-}
-#company dd {
+.Form {
+  max-width: 1440px;
   width: 70%;
-  border-bottom: solid 1px #dcdbdb;
-  padding: 20px 10px;
-}
-#company dd:last-of-type {
-  border-bottom: none;
-}
-#company .map {
-
-  filter: grayscale(1);
+  /* height: 200px; */
+  margin: 50px auto;
+  text-align: center;
+  /* background-color: #fff; */
 }
 
-#company .map iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-} */
+.Form h3 {
+  text-align: center;
+  position: relative;
+  font-size: 35px;
+  font-weight: bold;
+  color: #ff696a;
+}
 
-/*-------------------------------------------
-フッター
--------------------------------------------*/
-/*
-「position: absolute;」を設定して、フッター位置を画面下に設定
-「left: 0;」「right: 0;」で中央に配置
-*/
-/* #footer {
-  display: flex;
-  justify-content: space-between;
+.Form h3::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 40px;
+  background-color: #ff696a;
   position: absolute;
-  bottom: 20px;
+  top: 5px;
+  left: 0px;
+  transform: rotate(-20deg);
+}
+
+.Form h3::after {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 40px;
+  background-color: #ff696a;
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  transform: rotate(20deg);
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 4.0rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 6rem 8rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn-border-shadow {
+  padding: calc(1.5rem - 12px) 3rem 1.5rem;
+
+  background: #fff;
+}
+
+a.btn-border-shadow:before {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+
+  width: 100%;
+  height: 100%;
+
+  content: "";
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+
+  border: 3px solid #000;
+  border-radius: 0.5rem;
+}
+
+a.btn-border-shadow:hover {
+  padding: calc(1.5rem - 6px) 3rem;
+}
+
+a.btn-border-shadow:hover:before {
+  top: 0;
   left: 0;
-  right: 0;
 }
-#footer .menu {
-  display: flex;
+
+a.btn-border-shadow--color2 {
+  border-radius: 100vh;
 }
-#footer .menu li {
-  font-size: 0.75rem;
-  margin-right: 30px;
+
+a.btn-border-shadow--color2:before {
+  border-radius: 100vh;
+  -webkit-box-shadow: 3px 3px 0 #ff696a;
+  box-shadow: 3px 3px 0 #ff696a;
 }
-#footer .copyright {
-  font-size: 0.625rem;
-} */
+
+.btn:hover{
+  background-color: #98e7ff;
+  color: #fff;
+}
+
+.form, .form2{
+  margin-top: 50px;
+  font-size: 35px;
+  text-align: center;
+}
+
+.form2{
+  margin-bottom: 50px;
+}
+.googleform{
+  margin: 50px auto;
+  font-size: 35px;
+  background-color: #0bd;
+  color: #fff;
+  border-color: #fff;
+}
+
+.googleform:hover{
+  background-color: #fff;
+  color: #696969;
+}
+
+/* FOOTER */
+
+.footer_cont {
+  padding:  2% 3%;
+  text-align: center;
+  background-color: #e0ffff;
+}
+
+.footer_cont a {
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-family: "Oswald";
+}
+
+.footer_cont img {
+  width: 300px;
+  height: 100%;
+}
+
+.footer_cont a:hover {
+  opacity: 0.8;
+}
+
+.footer_sns {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.footer_sns ul {
+  margin: 20px 0 0 0;
+  padding: 0;
+  text-align: center;
+}
+
+.footer_sns ul li {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 100%;
+  background-color: #98e7ff;
+}
+
+.footer_sns ul li a {
+  text-decoration: none;
+  /* font-size: 20px; */
+  display: block;
+}
+
+.footer_sns ul li a i {
+  line-height: 50px;
+}
+
+.fa-twitter:hover {
+  color: #1c9bef;
+}
+
+.fa-instagram:hover {
+  color: #dc2a7b;
+}
+
+.fa-line:hover {
+  color: #09b53c;
+}
+
+.footer_map {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.footer_map ul {
+  text-align: center;
+}
+
+.footer_map li {
+  display: inline-block;
+  margin: 10px 20px;
+}
+
+.footer_map a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer_map a:hover {
+  color: #696969;
+}
 
 /*-------------------------------------------
 SP
