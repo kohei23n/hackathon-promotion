@@ -572,6 +572,9 @@ body.appear #container {
 
 .swiper-slide {
   margin: 50px 10px 50px;
+  object-fit: cover;
+  width: 100%;
+  height: 539.75px;
 }
 
 .tukareta {
