@@ -20,6 +20,7 @@ body {
 
 .bg_color {
   background-color: #98e7ff;
+  width: 100%;
 }
 
 /* ローディング画面 */
@@ -146,6 +147,7 @@ header {
 
 .image1 {
   width: 1100px;
+  /* width: 1040px; */
   height: 650px;
   object-fit: cover;
   position: absolute;
@@ -416,6 +418,7 @@ TOP、PRODUCTS
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  position: relative;
 }
 .product-list li {
   width: 30%;
@@ -427,6 +430,7 @@ TOP、PRODUCTS
   border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
   background-position: center center;/* 横長画像の左上を基準に表示 */
   display: inline-block;          /* 複数の画像を横に並べたい場合 */
+  border: 1px #ff6865 solid;
 }
 
 /* .content-wrapper{
@@ -460,6 +464,7 @@ vertical-align: top;
   text-align: center;
   font-size: 1.5rem;
   color: #ff6865;
+  font-weight: bold;
 }
 .link-text {
   display: block;
@@ -787,3 +792,50 @@ SP
     margin-bottom: 5px;
   }
 } */
+
+.kyoku{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.kyoku li{
+  list-style-type: none;
+  margin: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ff6865;
+  width: 300px;
+}
+
+.tekkukyoku::after{
+  content: "";
+  width: 2px;
+  height: 90%;
+  display: inline-block;
+  background-color: #ff6865;
+  position: absolute;
+  right: 415px;
+  top: 30px;
+}
+
+.tekkukyoku::before{
+  content: "";
+  width: 2px;
+  height: 90%;
+  display: inline-block;
+  background-color: #ff6865;
+  position: absolute;
+  left: 415px;
+  top: 30px;
+}
+
+.content-wrapper{
+  /* position: relative; */
+  margin: 0 80px;
+}
+
+body{
+  /* overflow-wrap: normal; */
+  max-width: 1440px; 
+  overflow-x: hidden;
+}
